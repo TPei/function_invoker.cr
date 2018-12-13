@@ -1,5 +1,5 @@
 require "json"
-require "../src/function_invoker"
+require "function_invoker"
 
 class Handler
   # if FunctionInvoker::Function is too long for you ;)
