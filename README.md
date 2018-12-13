@@ -10,9 +10,9 @@ Function.new("echo").invoke
 This will make a call to your OpenFaaS gateway to the echo function,
 which should be deployed :)
 
-Optionally, provide a http method, enable logging, provide data or ignore all errors:
+Optionally, provide a http method, provide data or ignore all errors:
 ```crystal
-Function.new("echo", "GET", logging: true).invoke("some_string", ignore_errors: true)
+Function.new("echo", "GET").invoke("some_string", ignore_errors: true)
 ```
 
 ## Installation
