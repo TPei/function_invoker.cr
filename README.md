@@ -64,7 +64,7 @@ somewhere at the top of your handler class to save some typing :)
 ### Example Function
 ```crystal
 require "json"
-require "../src/function_invoker"
+require "function_invoker"
 
 class Handler
   # if FunctionInvoker::Function is too long for you ;)
