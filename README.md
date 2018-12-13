@@ -27,7 +27,7 @@ faas new my-crystal-function --lang crystal
 ```yaml
 dependencies:
   function_invoker:
-    github: tpei/function_invoker
+    github: tpei/function_invoker.cr
 ```
 2. Run `shards install`
 
