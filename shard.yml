@@ -1,0 +1,9 @@
+name: function_invoker
+version: 0.1.0
+
+authors:
+  - TPei <t.s.peikert@gmail.com>
+
+crystal: 0.27.0
+
+license: MIT
