@@ -1,6 +1,7 @@
 # function_invoker
 
-Seamlessly call other OpenFaaS functions from your crystal functions.
+Seamlessly call other [OpenFaaS](https://www.openfaas.com/) functions
+from your crystal functions.
 
 Simply provide a function name and call it:
 ```crystal
@@ -104,7 +105,7 @@ Function.new("my_func").invoke(ignore_errors: true)
 
 ## Contributing
 
-1. Fork it (<https://github.com/tpei/function_invoker2/fork>)
+1. Fork it (<https://github.com/tpei/function_invoker/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
