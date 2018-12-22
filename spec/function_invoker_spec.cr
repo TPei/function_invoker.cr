@@ -3,9 +3,9 @@ require "webmock"
 
 
 describe FunctionInvoker do
-  describe "invoke" do
+  describe "#invoke" do
     context "with a POST request" do
-      it "makes a HTTP call with the given data" do
+      it "makes a HTTP call with the given data and method" do
         WebMock.stub(:post, "gateway:8080/function/some_function").
           with(body: "body").
           to_return(status: 200, body: "response")
@@ -16,7 +16,7 @@ describe FunctionInvoker do
     end
 
     context "with a GET request" do
-      it "makes a HTTP call with the given data" do
+      it "makes a HTTP call with the given data and method" do
         WebMock.stub(:get, "gateway:8080/function/some_function").
           with(body: "some body").
           to_return(status: 200, body: "response")

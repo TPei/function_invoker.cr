@@ -6,7 +6,6 @@ module FunctionInvoker
     @name : String
     @method : String
 
-    # + logging = false ?
     def initialize(@name, method = "POST")
       @method = method.upcase
       @gateway = ENV["GATEWAY"]? || ENV["gateway"]? || "gateway:8080"
