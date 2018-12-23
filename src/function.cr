@@ -1,5 +1,6 @@
-require "http/client"
 require "json"
+require "./get_function"
+require "./post_function"
 
 module FunctionInvoker
   class Function
@@ -13,11 +14,9 @@ module FunctionInvoker
 
     def invoke(data : String = "", ignore_errors : Bool = false)
       if @method == "POST"
-        response = HTTP::Client.post("#{@gateway}/function/#{@name}", headers: nil, body: data)
-        JSON::Any.new(response.body)
+        PostFunction.new(@name, @gateway.to_s).invoke(data)
       elsif @method == "GET"
-        response = HTTP::Client.get("#{@gateway}/function/#{@name}", headers: nil, body: data)
-        JSON::Any.new(response.body)
+        GetFunction.new(@name, @gateway.to_s).invoke(data)
       end
     rescue ex : Exception
       if ignore_errors
