@@ -103,6 +103,15 @@ end
 Function.new("my_func").invoke(ignore_errors: true)
 ```
 
+### Advanced Usage
+If you want to call functions on different gateways, you can use the
+underlying `GetFunction` and `PostFunction` classes.
+```crystal
+GetFunction.new("my_function", "gateway:8080").invoke(data)
+GetFunction.new("my_function", "my_gateway.com:8080").invoke(data)
+PostFunction.new("my_function", "another_gateway.com").invoke(data)
+```
+
 ## Contributing
 
 1. Fork it (<https://github.com/tpei/function_invoker/fork>)
